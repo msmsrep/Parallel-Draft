@@ -6,7 +6,7 @@
 図面はすべてお使いの PC の中だけで処理し、外部には送信しません。
 
 - プライバシーポリシー：<https://msmsrep.github.io/Parallel-Draft/privacy/>
-- お問い合わせ：msmsrep@outlook.com
+- お問い合わせ：<https://github.com/msmsrep/Parallel-Draft/pulls>
 
 > このリポジトリには、利用者向けの案内とプライバシーポリシーだけを置いています。
 > ソースコードは公開していません。
