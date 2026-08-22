@@ -68,7 +68,7 @@ Microsoft Store から入れた場合、置き場所は本アプリ専用の次�
 
 ## お問い合わせ
 
-msmsrep@outlook.com
+<https://github.com/msmsrep/Parallel-Draft/pulls>
 
 ## 変更について
 
