@@ -31,6 +31,8 @@ PC 内のファイルを自動で探すことはありません。
 本アプリがネットワークにアクセスするのは、次の場合だけです。
 
 - Microsoft Store でのライセンス確認（本アプリを利用する権利があるかの確認）
+- Pro（アドオン）の購入手続き。購入の画面は Microsoft Store が表示し、
+  お支払いの情報は本アプリを通りません。本アプリが受け取るのは「購入できたか」だけです
 - Microsoft Store 経由での更新（Windows が行います）
 
 いずれの通信にも、図面の内容やファイル名は含まれません。
@@ -63,4 +65,4 @@ Microsoft Store から入れた場合、置き場所は本アプリ専用の次�
 
 ## お問い合わせ
 
-<https://github.com/msmsrep/Parallel-Draft/pulls>
+<https://github.com/msmsrep/Parallel-Draft/issues>
