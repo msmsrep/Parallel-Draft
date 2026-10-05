@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+  jekyll-theme-primer の既定レイアウトを置き換えたもの。変えた理由は 2 つ。
+
+    1. html の lang をページごとに決める。テーマの既定は site.lang 固定なので、
+       日本語サイトの中の英語ページ（/en/）も lang="ja-JP" になってしまう。
+    2. テーマは本文の前に「サイト名の h1」を自動で入れる。本文の見出しと合わせて
+       h1 が 2 つになるため、入れない。見出しは各ページの Markdown だけが持つ。
+
+  CSS はテーマのものをそのまま使う（/assets/css/style.css はテーマが生成する）。
+-->
+<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" href="{{ '/images/icon.png' | relative_url }}" type="image/png">
+    {% if page.alternate_url %}
+    <link rel="alternate" hreflang="{{ page.alternate_lang }}" href="{{ page.alternate_url }}">
+    {% endif %}
+    <style>
+      .markdown-body { max-width: 62rem; }
+      /* ストアへの誘導。本文のリンクと見分けがつくように 1 つだけ目立たせる。 */
+      .store-link {
+        display: inline-block;
+        margin: 0.5rem 0 1.5rem;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0969da;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .store-link:hover { background: #0860ca; color: #fff; text-decoration: none; }
+      .lead { font-size: 1.15rem; line-height: 1.7; }
+      /* スクリーンショットは 2 列。幅が狭い端末では 1 列に落とす。 */
+      .shots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      .shots figure { margin: 0; }
+      .shots img { width: 100%; border: 1px solid #d0d7de; border-radius: 6px; }
+      .shots figcaption { margin-top: 0.4rem; font-size: 0.9rem; color: #57606a; }
+      .site-footer {
+        margin-top: 3rem;
+        padding-top: 1rem;
+        border-top: 1px solid #d0d7de;
+        font-size: 0.9rem;
+        color: #57606a;
+      }
+      @media (prefers-color-scheme: dark) {
+        .shots img { border-color: #30363d; }
+        .shots figcaption, .site-footer { color: #8b949e; }
+        .site-footer { border-top-color: #30363d; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      {{ content }}
+      <footer class="site-footer">
+        {% if page.lang == 'en-US' %}
+        <a href="{{ '/' | relative_url }}">日本語</a> &middot;
+        <a href="{{ '/privacy/' | relative_url }}">Privacy policy (Japanese)</a> &middot;
+        <a href="https://github.com/msmsrep/Parallel-Draft/issues">Support</a>
+        {% else %}
+        <a href="{{ '/en/' | relative_url }}">English</a> &middot;
+        <a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a> &middot;
+        <a href="https://github.com/msmsrep/Parallel-Draft/issues">お問い合わせ</a>
+        {% endif %}
+        <p>&copy; 2026 msmsrep</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+# GitHub Pages（https://msmsrep.github.io/Parallel-Draft/）の設定。
+# 公開リポジトリでは docs/_config.yml に置かれる（public/manifest.txt を参照）。
+#
+# ここで決めるのは、どのページにも共通してかかるもの。
+#   - lang        既定の言語。ページ側の front matter の lang が勝つ（英語ページは en-US）
+#   - description 検索結果とリンクカードに出る説明文
+#   - image       リンクカードの画像。ページ側で上書きできる
+# ページ固有の title / description / image は各ページの front matter にある。
+
+title: Parallel-Draft
+tagline: PDF 図面の差分ビューア
+description: >-
+  2 つの PDF 図面を比較し、変更箇所を色枠で囲んで示す Windows デスクトップアプリ。
+  改訂図が届いたときの「前の版とどこが違うのか」を、2 枚を見比べて探す作業から解放します。
+  図面はすべてお使いの PC の中だけで処理し、外部には送信しません。
+
+url: https://msmsrep.github.io
+baseurl: /Parallel-Draft
+lang: ja-JP
+
+author:
+  name: msmsrep
+
+# リンクカードの既定の画像。日本語ページ用。英語ページは front matter で差し替える。
+image: https://msmsrep.github.io/Parallel-Draft/images/og-ja.png
+twitter:
+  card: summary_large_image
+
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 既定のレイアウトは _layouts/default.html（テーマのものを上書きしてある）。
+# テーマの既定のままだと、見出しの前にもう 1 つ h1 が入って h1 が 2 つになる。
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default

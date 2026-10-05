@@ -1,5 +1,9 @@
 ---
-title: Parallel-Draft プライバシーポリシー
+title: プライバシーポリシー
+description: >-
+  Parallel-Draft は個人情報・アカウント情報・利用状況（テレメトリ）・図面の内容・ファイル名の
+  いずれも収集しません。読み込んだ図面も比較の結果も、お使いの PC の中だけで処理・保存されます。
+lang: ja-JP
 ---
 
 # Parallel-Draft プライバシーポリシー
