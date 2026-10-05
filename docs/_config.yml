@@ -23,8 +23,9 @@ author:
 
 # リンクカードの既定の画像。日本語ページ用。英語ページは front matter で差し替える。
 image: https://msmsrep.github.io/Parallel-Draft/images/og-ja.png
-twitter:
-  card: summary_large_image
+
+# twitter: は置かない。username を持たせないまま置くと jekyll-seo-tag が
+# twitter:site を content="@" の空のまま出す。カードの種類は画像の有無から決まる。
 
 theme: jekyll-theme-primer
 plugins:
