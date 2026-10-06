@@ -78,7 +78,7 @@ image: https://msmsrep.github.io/Parallel-Draft/images/og-en.png
         {
           "@type": "Question",
           "name": "Does it work on scanned drawings?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Shape differences are detected. An image-only PDF has no text to extract, so the text comparison that reports a dimension change as a number does not apply." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Shape differences are detected. With Pro, the text in an image-only PDF is read with the Windows text recognition (OCR), so dimension changes are reported as numbers too. The reading happens on your PC and nothing is uploaded. OCR can misread characters, so changes read this way carry an "OCR" mark." }
         },
         {
           "@type": "Question",
@@ -168,6 +168,9 @@ For 7 days after installation you can also try:
 - **Saved review records** (`.pdiff`) you can reopen and continue
 - **Ignore areas**, so a title block does not show up as a change every time
 - Detection of changes in line weight or color alone
+- A shape that moved without changing is shown as one **moved** change
+- Scanned drawings **tilted** by up to a few degrees are straightened automatically before comparing
+- Text in scanned drawings is **read with OCR**, so dimension changes show up there too
 
 After 7 days those features stop. To keep using them, buy "Parallel-Draft Pro" from inside the
 app. It is a one-time purchase (¥8,000), not a subscription, so there are no further charges and
@@ -203,7 +206,7 @@ The [privacy policy](../privacy/) has the details (Japanese).
 
 - Windows 10 version 1809 (10.0.17763) or later
 - 64-bit (x64). Runs on ARM64 PCs as well
-- PDF drawings (a scanned image-only drawing has no text to compare)
+- PDF drawings (text in a scanned image-only drawing is read with the Pro OCR, which needs Windows text recognition for English or Japanese)
 - The interface is available in Japanese and English, following your Windows display language
 
 ## Frequently asked questions
@@ -222,8 +225,9 @@ the source data, so drawings a client sent you as PDFs can be compared as they a
 
 ### Does it work on scanned drawings?
 
-Shape differences are detected. An image-only PDF has no text to extract, so the text comparison
-that reports a dimension change as a number does not apply.
+Shape differences are detected. With Pro, the text in an image-only PDF is read with the Windows
+text recognition (OCR), so dimension changes are reported as numbers too. The reading happens on your PC
+and nothing is uploaded. OCR can misread characters, so changes read this way carry an "OCR" mark.
 
 ### Are my drawings ever uploaded?
 
