@@ -24,6 +24,13 @@ author:
 # リンクカードの既定の画像。日本語ページ用。英語ページは front matter で差し替える。
 image: https://msmsrep.github.io/Parallel-Draft/images/og-ja.png
 
+# Google Search Console の所有権の確認。jekyll-seo-tag が
+# <meta name="google-site-verification"> をどのページにも出す。
+# プロパティは「URL プレフィックス」で https://msmsrep.github.io/Parallel-Draft/ を登録する
+# （github.io はドメインの DNS を触れないので「ドメイン」プロパティは使えない）。
+webmaster_verifications:
+  google: xxCVbDv8etzU4YO22Wzsz6xP0OS7Y5sOulTJRJW7Ej0
+
 # twitter: は置かない。username を持たせないまま置くと jekyll-seo-tag が
 # twitter:site を content="@" の空のまま出す。カードの種類は画像の有無から決まる。
 
